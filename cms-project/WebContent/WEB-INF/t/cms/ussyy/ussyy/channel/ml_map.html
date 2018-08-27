@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${channel.title!channel.name} - ${site.name}</title>
+    <link rel="stylesheet" href="/${res}/css/reset.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/${res}/css/media.css">
+    <link rel="stylesheet" href="/${res}/lib/css/colorbox.css">
+    <link rel="stylesheet" href="/${res}/css/common.css">
+    <link rel="stylesheet" href="/${res}/css/common2.css">
+    <link rel="stylesheet" href="/${res}/css/about.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 头部 -->
+    [#include "../include/header.html"/]
+    <!-- 内容区 -->
+    <div class="main">
+        <div class="main-banner">
+            <img class="main-banner--img" src="/${res}/img/about/about_banner.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <ul class="page-bread">
+                <li><a href="/cms/">HOME</a></li>
+                <li><a href="/cms/about/index.jhtml">ABOUT</a></li>
+                <li>CAMPUS FACILITIES</li>
+            </ul>
+            <div class="main-wrap">
+                <div class="row">
+                    <div class="section-wrap col-xs-9 col-sm-9 col-md-9 ie7-width">
+                        <div class="content-news">
+                            <div class="content-news--title">
+                                <div class="news-title--wrap">
+                                    <h3>GETTING TO CAMPUS</h3>
+                                </div>
+                                <div class="news-title--underline">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="about-content">
+                                <div class="ts-content--artical">
+                                    <ul class="traffic-way">
+
+                                        [@cms_content_list orderBy='5' channelId='281' channelOption='0' dateFormat='yyyy-MM-dd']
+                                        [#list tag_list as c]
+                                        <li class="traffic-way--items">
+                                            <div class="traffic-icon">
+                                                <img src="${c.typeImg!}" alt="">
+                                            </div>
+                                            <div class="traffic-intro">
+                                                <div class="traffic-intro--title">${c.title!}</div>
+                                                <div class="traffic-intro--text">${c.description!}</div>
+                                            </div>
+                                            <div class="hover-border">
+                                                <div class="border-left"></div>
+                                                <div class="border-top"></div>
+                                                <div class="border-right"></div>
+                                                <div class="border-bottom"></div>
+                                            </div>
+                                        </li>
+                                        [/#list]
+                                        [/@cms_content_list]
+                                    </ul>
+                                    <div class="map-wrap">
+                                        <div id="map-position"></div>
+                                        <div class="map-title">
+                                            <div class="map-title--point"></div>
+                                            <div class="map-title--text">Campus Map</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar -->
+                    <div class="content-events col-xs-3 col-sm-3 col-md-3">
+                        <div class="content-events--title">
+                            <span>ABOUT</span>
+                        </div>
+                        <div class="content-sidebar">
+                            <div class="sidebar-catalog about-catalog" id="sidebar-panel">
+                                <div class="panel-items panel">
+                                    <div class="catalog-items current-catalog">
+                                        <a href="#school" data-toggle="collapse" data-parent="#sidebar-panel">
+                                            <span>THE SCHOOL</span>
+                                            <i class="icon panel-icon col-open"></i>
+                                        </a>
+                                    </div>
+                                    <div id="school" class="panel-collapse collapse">
+                                        <ul class="panel-secondary panel-body">
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/overview/index.jhtml" >OVERVIEW</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/history/index.jhtml">HISTORY</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/deanmessage/index.jhtml">DEAN'MESSAGE</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/organizational/index.jhtml">ORGANIZATIONAL STRUCURE</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-items panel">
+                                    <div class="catalog-items">
+                                        <a href="#campus" data-toggle="collapse" data-parent="#sidebar-panel">
+                                            <span>THE CAMPUS</span>
+                                            <i class="icon panel-icon"></i>
+                                        </a>
+                                    </div>
+                                    <div id="campus" class="panel-collapse collapse">
+                                        <ul class="panel-secondary panel-body">
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/studentlife/index.jhtml">STUDENT LIFE</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/campusfacilities/index.jhtml">CAMPUS FACILITES</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/shenzhenuniversitytown/index.jhtml">SHENZHEN UNVERSITY TOWN</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-items panel">
+                                    <div class="catalog-items  current-catalog">
+                                        <a href="#visit" data-toggle="collapse" data-parent="#sidebar-panel">
+                                            <span>VISIT</span>
+                                            <i class="icon panel-icon"></i>
+                                        </a>
+                                    </div>
+                                    <div id="visit" class="panel-collapse collapse in">
+                                        <ul class="panel-secondary panel-body">
+                                            <li class="panel-secondary--items  current-item">
+                                                <a href="/cms/gettingtocampus/index.jhtml">GETTING TO CAMPUS</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/cms/contact/index.jhtml">CONTACT US</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    [#include "../include/footer.html"/]
+    <script src="/${res}/lib/js/jquery.1.10.2.js"></script>
+    <script src="/${res}/lib/js/bootstrap.min.js"></script>
+    <script src="/${res}/lib/js/jquery.colorbox-min.js"></script>
+    <script src="/${res}/js/sidebaricon.js"></script>
+    <script src="/${res}/lib/js/idangerous.swiper.min.js"></script>
+    <script language="javascript" src="http://webapi.amap.com/maps?v=1.3&key=adb331e6f22cad46e4a9f8becbbab172"></script>
+    <script language="javascript">
+    var mapObj, marker;
+    //初始化地图对象，加载地图
+    function mapInit() {
+        mapObj = new AMap.Map("map-position", {
+            //二维地图显示视口
+            view: new AMap.View2D({
+                center: new AMap.LngLat(113.969645, 22.591814), //地图中心点
+                zoom: 13 //地图显示的缩放级别
+            })
+        });
+        //添加点标记，并使用自己的icon
+        addMarker();
+        mapObj.setLang("en");
+    }
+
+    //在地图上添加点标记函数
+    function addMarker() {
+        marker = new AMap.Marker({
+            icon: new AMap.Icon({ //复杂图标
+                size: new AMap.Size(37, 43), //图标大小
+                image: "/${res}/img/about/map_pos.png", //大图地址
+                imageOffset: new AMap.Pixel(0, 0) //相对于大图的取图位置
+            }),
+            position: new AMap.LngLat(113.969645, 22.591814)
+        });
+        marker.setMap(mapObj); //在地图上添加点
+
+        var infoWindow = new AMap.InfoWindow({
+            content: "123",
+            size: new AMap.Size(240, 0),
+            autoMove: true,
+            offset: new AMap.Pixel(0, -20)
+        });
+        AMap.event.addListener(marker, "click", function() {
+            infoWindow.open(mapObj, marker.getPosition())
+        });
+    }
+    mapInit();
+    </script>
+</body>
+
+</html>

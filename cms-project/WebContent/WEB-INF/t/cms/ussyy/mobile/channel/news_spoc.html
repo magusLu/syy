@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>	<html class="ie6 lt-ie9 lt-ie8 lt-ie7" lang="zh-CN"> <![endif]-->
+<!--[if IE 7]>		<html class="ie7 lt-ie9 lt-ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 8]>		<html class="ie8 lt-ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 9]>		<html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>  <!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="keywords" content="${channel.keywords!}"/>
+<meta http-equiv="description" content="${channel.description!}"/>
+<title>${channel.title!channel.name} - ${site.name}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<link  href="/${res}/css/spoccss/base.css"  type="text/css"  rel="stylesheet"/>
+<link  href="/${res}/css/spoccss/home.css"  type="text/css"  rel="stylesheet"/>
+<link  href="/${res}/css/spoccss/lib-2.4.css"  type="text/css"  rel="stylesheet"/>
+
+<head>
+<body>
+<div class="webWidth add-class clearfix">
+        <ul style="margin-top: 16px;">
+
+            [@cms_content_page channelId=channel.id count='2' sysPage='3' titLen='25' append='...' orderBy='4' dateFormat='yyyy-MM-dd' channelOption='0']
+            [#list tag_pagination.list as a]
+            <li>
+                <div class="add-t">
+                    <h3>${a.title!''}</h3>
+                    <h2 class="ell">${a.description!''}</h2>
+                    <p>${a.author!''}<br/>${a.shortTitle!''}</p>
+                    <h5><a href="${a.origin!a.url}" target="_blank">点击进入</a></h5>
+                </div>
+                <div class="add-p"><a href="${a.origin!a.url}" target="_blank"><img src="${a.contentImg!''}"/></a></div>
+
+            </li>
+            [/#list]
+            [/@cms_content_page]
+        </ul>
+</div>
+</body>
+</html>

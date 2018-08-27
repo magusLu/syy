@@ -1,0 +1,87 @@
+
+body{ height:100%;}
+.xinsidebox{
+	display:none;
+	position: fixed;
+	z-index:999;
+	left:0;
+	top:0px;
+	width:100%;
+	height:100%;
+	min-width:960px;
+}
+* html .xinsidebox{position:absolute;}
+.xboxOverlay{
+	display:none;
+	position:fixed;
+	z-index:999;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	filter:Alpha(opacity=80);
+	opacity:0.8;
+}
+* html .xboxOverlay{position:absolute;}
+.xboxClose{
+	position:absolute;
+	left:-60px;
+	top:0;
+	z-index: 20;
+	width:60px;
+	height:60px;
+	background: url(../images/close.png) no-repeat left top;
+    text-indent: -9999px;
+	cursor:pointer;
+}
+.xboxClose:hover{background-position:0 top;}
+.xboxWrapper{
+	display:none;
+	position:absolute;
+	z-index:1000;
+	right:-100%;
+	height:100%;
+	background-color:#fff;
+}
+.xboxContent{
+	height:100%;
+}
+.xboxLoadedContent{
+	height:100%;
+}
+/*.xboxHeader{
+	height:40px;
+	padding:20px 0;
+	background-color:#f0ac2a;
+}*/
+.xboxArticle{
+	
+	height:100%;
+	background-color:#fff;
+	overflow-y:auto;
+	overflow:hidden;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+	.xinsidebox{ min-width: 100%;}
+	.xboxClose{
+		left: auto;
+		right: 0;
+		top:0;
+		width: 35px;
+		height: 35px;
+		background: url(../images/close.png) no-repeat left top;
+		background-size: 35px auto;
+	}
+}
+
+
+
+
+
+

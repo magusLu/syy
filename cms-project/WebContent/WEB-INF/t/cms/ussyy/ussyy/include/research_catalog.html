@@ -1,0 +1,62 @@
+[#assign paths=',']
+[#list channel.nodeList as n]
+[#assign paths=paths+n.path+',']
+[/#list]
+<div class="content-events col-xs-3 col-sm-3 col-md-3">
+    <div class="content-events--title">
+        <span>RESEARCH</span>
+    </div>
+    <div class="content-sidebar">
+        <div class="sidebar-catalog about-catalog" id="sidebar-panel">
+            <div class="panel-items panel [#if paths?index_of('researchoverview') gte 0]current-catalog[/#if]">
+                <div class="catalog-items">
+                    <!-- <a href="#school" data-toggle="collapse" data-parent="#sidebar-panel"> -->
+                    <a href="/cms/researchoverview/index.jhtml">
+                        <span>OVERVIEW</span>
+                        <!-- <i class="icon panel-icon col-open"></i> -->
+                    </a>
+                </div>
+            </div>
+            <div class="panel-items panel">
+                <div class="catalog-items">
+                    <!-- <a href="#campus" data-toggle="collapse" data-parent="#sidebar-panel"> -->
+                    <a href="javasrcipt:;" data-toggle="collapse" data-parent="#sidebar-panel">
+                        <span>FACILITIES &#38; EQUIPMENT</span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="panel-items panel">
+                <div class="catalog-items">
+                    <a href="javasrcipt:;" data-toggle="collapse" data-parent="#sidebar-panel">
+                        <span>TECHNOLOGY TRANSFER</span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="panel-items panel [#if paths?index_of('tsinghuainstitutes') gte 0]current-catalog[/#if]">
+                <div class="catalog-items">
+                    <a href="/cms/tsinghuainstitutes/index.jhtml">
+                        <span>TSINGHUA INSTITUTES</span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="panel-items panel [#if paths?index_of('researchgaii') gte 0]current-catalog[/#if]">
+                <div class="catalog-items">
+                    <a href="/cms/researchgaii/index.jhtml">
+                        <span>GOVERNMENT ACCREDITED INNOVATION INSTITUTES</span>
+
+                    </a>
+                </div>
+            </div>
+            <div class="panel-items panel [#if paths?index_of('managementoffice') gte 0]current-catalog[/#if]">
+                <div class="catalog-items">
+                    <a href="/cms/managementoffice/index.jhtml">
+                        <span>MANAGEMENT OFFICE</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

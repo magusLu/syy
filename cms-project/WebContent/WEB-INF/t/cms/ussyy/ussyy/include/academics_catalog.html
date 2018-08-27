@@ -1,0 +1,102 @@
+<div class="content-events col-xs-3 col-sm-3 col-md-3">
+    <div class="content-events--title">
+        <span>ACADEMICS</span>
+    </div>
+    [#assign paths=',']
+    [#list channel.nodeList as n]
+        [#assign paths=paths+n.path+',']
+    [/#list]
+    <div class="content-sidebar">
+        <div class="sidebar-catalog about-catalog" id="sidebar-panel">
+            <div class="panel-items panel">
+                <div class="catalog-items [#if paths?index_of('division') gte 0]current-catalog[/#if]">
+                    <a href="#school" data-toggle="collapse" data-parent="#sidebar-panel">
+                        <span>DIVISONS</span>
+                        <i class="icon panel-icon [#if paths?index_of('division') gte 0]col-open[/#if]"></i>
+                    </a>
+                </div>
+                <div id="school" class="panel-collapse collapse [#if paths?index_of('division') gte 0]in[/#if]">
+                    <ul class="panel-secondary panel-body">
+                        <li class="panel-secondary--items [#if paths?index_of('subdivision') gte 0]current-item[/#if]">
+                            <a href="/cms/subdivision/index.jhtml">DIVISONS</a>
+                        </li>
+                        <li class="panel-secondary--items [#if paths?index_of('lifesciencehealth') gte 0]current-item[/#if]">
+                            <a href="/cms/lifesciencehealth/index.jhtml">LIFE SCIENCE & HEALTH</a>
+                        </li>
+                        <li class="panel-secondary--items">
+                            <a href="javascript:;">ENERGY & ENVIRONMENT</a>
+                        </li>
+                        <li class="panel-secondary--items ">
+                            <a href="javascript:;">INFORMATION SCIENCE</a>
+                        </li>
+                        <li class="panel-secondary--items">
+                            <a href="javascript:;">LOGISTICS & TRANSPORTATION</a>
+                        </li>
+                        <li class="panel-secondary--items">
+                            <a href="javascript:;">ADVANCED MANUFACTURING</a>
+                        </li>
+                        <li class="panel-secondary--items">
+                            <a href="javascript:;">MARINE SCIENCE & TECHNOLOGY</a>
+                        </li>
+                        <li class="panel-secondary--items">
+                            <a href="javascript:;">SOCIAL SCIENCE & MANAGEMENT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-items panel">
+                <div class="catalog-items [#if paths?index_of('jiontteachingprograms') gte 0]current-catalog[/#if]">
+                    <a href="#campus" data-toggle="collapse" data-parent="#sidebar-panel">
+                        <span>JIONT TEACHING PROGRAMS</span>
+                        <i class="icon panel-icon  [#if paths?index_of('jiontteachingprograms') gte 0]col-open[/#if]"></i>
+                    </a>
+                </div>
+                <div id="campus" class="panel-collapse collapse [#if paths?index_of('jiontteachingprograms') gte 0]in[/#if]">
+                    <ul class="panel-secondary panel-body">
+                        <li class="panel-secondary--items">
+                            <a href="javascript:;">STUDENT LIFE</a>
+                        </li>
+                        <li class="panel-secondary--items current-item">
+                            <a href="javascript:;">CAMPUS FACILITES</a>
+                        </li>
+                        <li class="panel-secondary--items">
+                            <a href="javascript:;">SHENZHEN UNVERSITY TOWN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-items panel">
+                <div class="catalog-items [#if paths?index_of('nondegreetraining') gte 0]current-catalog[/#if]">
+                    <a href="#visit" data-toggle="collapse" data-parent="#sidebar-panel">
+                        <span>NON-DEGREE TRAINING</span>
+                        <i class="icon panel-icon  [#if paths?index_of('nondegreetraining') gte 0]col-open[/#if]"></i>
+                    </a>
+                </div>
+                <div id="visit" class="panel-collapse collapse [#if paths?index_of('nondegreetraining') gte 0]in[/#if]">
+                    <ul class="panel-secondary panel-body">
+                        <li class="panel-secondary--items">
+                            <a href="/${res}/about/map">GETTING TO CAMPUS</a>
+                        </li>
+                        <li class="panel-secondary--items">
+                            <a href="/${res}/about/contact">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-items panel [#if paths?index_of('facultydirectory') gte 0]current-catalog--bold[/#if]">
+                <div class="catalog-items ">
+                    <a href="/cms/facultydirectory/index.jhtml">
+                        <span>FACULTY DIRECTORY</span>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-items panel [#if paths?index_of('teachinglab') gte 0]current-catalog--bold[/#if]">
+                <div class="catalog-items ">
+                    <a href="/cms/teachinglab/index.jhtml">
+                        <span>TEACHING LAB</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

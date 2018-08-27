@@ -1,0 +1,57 @@
+<header class="header">
+    <div class="tophead">
+        <div class="mainwidth">
+            <ul class="toplinks">
+                <li><a href="#">清华主页</a></li>
+                <li><a href="#">院长信箱</a></li>
+                <li><a href="#">预决算公开</a></li>
+            </ul>
+
+            <div class="topsearchcon">
+                <input name="keywords" placeholder="搜索内容" class="input" type="text">
+                <input name="submit" value="" class="submit" type="submit">
+            </div>
+
+            <div class="lanbox"><a href="#">English</a></div>
+
+        </div>
+    </div>
+
+    <div class="mainwidth">
+        <div class="logobox">
+            <a href="/cms/" class="logo">
+                <img  src="/${res}/cn/images/logo.png">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li [#if channel.nodeList[0].path=="wygk"]class="active"[/#if]>
+                    <a href="/cms/gs/index.jhtml"><span>学院概况</span></a>
+                    <div class="secnav">
+                        <ul>
+                            <li><a href="#"><span>概述</span></a></li>
+                            <li><a href="/cms/lsyg/index.jhtml"><span>历史沿革</span></a></li>
+                            <li><a href="/cms/lrld/index.jhtml"><span>历任领导</span></a></li>
+                            <li><a href="/cms/xrld/index.jhtml"><span>现任领导</span></a></li>
+                            <li><a href="/cms/zzjg/index.jhtml"><span>组织架构</span></a></li>
+                            <li><a href="/cms/xyxx/index.jhtml"><span>校园信息</span></a></li>
+                            <li><a href="/cms/spyhc/index.jhtml"><span>视频与画册</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li [#if channel.nodeList[0].path=="szdw"]class="active"[/#if]><a href="/cms/szdw/index.jhtml"><span>师资队伍</span></a></li>
+                <li><a href="#"><span>人才培养</span></a></li>
+                <li><a href="#"><span>科学研究</span></a></li>
+                <li><a href="#"><span>技术转移</span></a></li>
+                <li [#if channel.nodeList[0].path=="zsxx"]class="active"[/#if]><a href="/cms/bkcjwt/index.jhtml"><span>招生信息</span></a></li>
+                <li><a href="#"><span>交流合作</span></a></li>
+                <li [#if channel.nodeList[0].path=="rczp"]class="active"[/#if]><a href="/cms/zzjsyj/index.jhtml"><span>人才招聘</span></a></li>
+                <li [#if channel.nodeList[0].path=="xsyd"]class="active"[/#if]><a href="/cms/xszzjg/index.jhtml"><span>学生园地</span></a></li>
+                <li><a href="#"><span>培训学院</span></a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+</header>

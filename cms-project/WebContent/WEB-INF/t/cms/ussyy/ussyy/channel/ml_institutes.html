@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${channel.title!channel.name} - ${site.name}</title>
+    <link rel="stylesheet" href="/${res}/css/reset.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/${res}/css/media.css">
+    <link rel="stylesheet" href="/${res}/lib/css/colorbox.css">
+    <link rel="stylesheet" href="/${res}/css/common.css">
+    <link rel="stylesheet" href="/${res}/css/common2.css">
+    <link rel="stylesheet" href="/${res}/css/research.css">
+    <link rel="stylesheet" href="/${res}/css/loading.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 头部 -->
+    [#include "../include/header.html"/]
+    <!-- 内容区 -->
+    <div class="main">
+        <div class="main-banner">
+            <img class="main-banner--img" src="/${res}/img/research/research_banner.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <ul class="page-bread">
+                <li><a href="/cms/">HOME</a></li>
+                <li><a href="/cms/mainresearch/index.jhtml">RESEARCH</a></li>
+                <li>TSINGHUA INSTITUTES</li>
+            </ul>
+            <div class="main-wrap">
+                <div class="row">
+                    <div class="section-wrap col-xs-9 col-sm-9 col-md-9 ie7-width">
+                        <div class="content-news">
+                            <div class="content-head">
+                                <div class="content-news--title">
+                                    <div class="news-title--wrap">
+                                        <h3>TSINGHUA INSTITUTES</h3>
+                                    </div>
+                                    <div class="news-title--underline">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <!-- <ul class="page-bread--inside">
+                                    <li><a href="/cms/">HOME</a></li>
+                                    <li><a href="/cms/mainresearch/index.jhtml">RESEARCH</a></li>
+                                    <li>TSINGHUA INSTITUTES</li>
+                                </ul> -->
+                            </div>
+                            <div class="main-content">
+                                <div class="ts-content--artical">
+                                    <ul class="institutes-list">
+                                        [@cms_content_list count='5' orderBy='4' channelId='354' channelOption='0' dateFormat='yyyy-MM-dd']
+                                        [#list tag_list as c]
+                                        <li class="institutes-items">
+                                            <div class="institutes-items--thumb">
+                                                <a href="javascript:;">
+                                                    <img src="${c.attr.img!}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="institutes-items--content">
+                                                <a class="news-pop" href="${c.url!}">
+                                                    <div class="institutes-title--wrap">
+                                                        <img src="${c.typeImg!}">
+                                                        <div class="vline"></div>
+                                                        <div class="institutes-title">${c.title!}</div>
+                                                    </div>
+                                                    <div class="institutes-intro">${c.txt!}</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        [#if (c_index+1) != tag_list?size]
+                                        <div class="dashed-border"></div>
+                                        [/#if]
+
+                                        [/#list]
+                                        [/@cms_content_list]
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content--events pullmargin">
+                            <div class="section-two content-events--wrap">
+                                <div class="content-news--title">
+                                    <div class="news-title--wrap">
+                                        <h3>IN THE DIVISIONS</h3>
+                                    </div>
+                                    <div class="news-title--underline">
+                                        <div></div>
+                                    </div>
+                                </div>
+
+                                [@cms_channel_list parentId='355']
+                                [#list tag_list as tag]
+
+                                <h3 class="black-color events-title">${tag.name!}</h3>
+                                <ul class="figure-thumb">
+                                    [@cms_content_list orderBy='5' channelId='${tag.id!}' channelOption='0' dateFormat='yyyy-MM-dd']
+                                    [#list tag_list as c]
+                                    <li class="figure-thumb--items">
+                                        <a href="javascript:;">
+                                            <img src="${c.typeImg!}" alt="">
+                                            <div class="thumb-mask"></div>
+                                            <div class="thumb-mask--title">
+                                                <div class="title-wrap">
+                                                    <span>${c.title!}</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    [/#list]
+                                    [/@cms_content_list]
+
+                                </ul>
+
+                                [/#list]
+                                [/@cms_channel_list]
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar -->
+                    [#include "../include/research_catalog.html"/]
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    [#include "../include/footer.html"/]
+    <script src="/${res}/lib/js/jquery.1.10.2.js"></script>
+    <script src="/${res}/lib/js/bootstrap.min.js"></script>
+    <script src="/${res}/lib/js/jquery.colorbox-min.js"></script>
+    <script src="/${res}/js/sidebaricon.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".news-pop").colorbox({
+            iframe: true,
+            innerHeight: "800px",
+            width: "52%",
+            opacity: 0.8,
+            overlayClose: true,
+        });
+    })
+    </script>
+</body>
+
+</html>

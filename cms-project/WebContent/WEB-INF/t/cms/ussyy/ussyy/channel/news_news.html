@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${channel.title!channel.name} - ${site.name}</title>
+    <link rel="stylesheet" href="/${res}/css/reset.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/${res}/css/media.css">
+    <link rel="stylesheet" href="/${res}/lib/css/colorbox.css">
+    <link rel="stylesheet" href="/${res}/css/common.css">
+    <link rel="stylesheet" href="/${res}/css/common2.css">
+    <link rel="stylesheet" href="/${res}/css/list.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/${res}/lib/js/jquery.1.10.2.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    [#include "../include/header.html"/]
+    <!-- 内容区 -->
+    <div class="main">
+        <div class="main-banner">
+            <img class="main-banner--img" src="/${res}/img/list/list_banner1.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <ul class="page-bread">
+                <li><a href="/cms/">HOME</a></li>
+                <li><a href="/cms/newsevent/index.jhtml">NEWS & EVENTS</a></li>
+                <li>CAMPUS NEWS</li>
+            </ul>
+            <div class="main-content">
+                <div class="row">
+                    <div class="section-wrap col-xs-9 col-sm-9 col-md-9 ie7-width">
+                        <div class="content-news">
+                            <div class="content-news--title">
+                                <div class="news-title--wrap">
+                                    <h3>CAMPUS NEWS</h3>
+                                </div>
+                                <div class="news-title--underline">
+                                    <div></div>
+                                </div>
+                            </div>
+
+                                [#assign monthArr=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SET','OCT','NOV','DEC']]
+                                [#assign channelId=channel.id]
+                                [#if channel.path=='newsevent']
+                                    [#assign channelId='319']
+                                [/#if]
+                                [@cms_content_page channelId=channelId orderBy='4' channelOption='1' count='7' typeId='1'  dateFormat='yyyy-MM-dd']
+
+                                <ul class="news-articals">
+                                [#list tag_pagination.list as c]
+                                [#assign month=c.releaseDate?string("MM")?number-1]
+                                <li class="news-articals--items">
+                                    <div class="articals-thumb floatLeft">
+                                        <a href="javascript:;">
+                                            <img src="${c.typeImg!}" alt="" style="width: 300px;height: 186px;">
+                                            <div class="artical-time">
+                                                <div class="artical-time--day">${c.releaseDate?string("dd")}</div>
+                                                <div class="artical-time--month">${monthArr[month]}</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="articals-wrapper floatLeft">
+                                        <a href="${c.url!}">
+                                            <div class="articals-title">
+                                                ${c.title!}
+                                            </div>
+                                            <div class="articals-intros" style="height: 38px;">
+                                                ${c.description!}
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                [/#list]
+                                </ul>
+
+                                <div class="news-pagination">[@cms_pagination sysPage='6'/]</div>
+                                [/@cms_content_page]
+                        </div>
+                    </div>
+					<!-- NEWS & EVENT -->
+                    [#include "../include/news_catalog.html"/]
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    [#include "../include/footer.html"/]
+
+    <script src="/${res}/lib/js/bootstrap.min.js"></script>
+    <script src="/${res}/js/sidebaricon.js"></script>
+</body>
+
+</html>

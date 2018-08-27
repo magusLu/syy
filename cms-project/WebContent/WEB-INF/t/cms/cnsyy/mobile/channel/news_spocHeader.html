@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>	<html class="ie6 lt-ie9 lt-ie8 lt-ie7" lang="zh-CN"> <![endif]-->
+<!--[if IE 7]>		<html class="ie7 lt-ie9 lt-ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 8]>		<html class="ie8 lt-ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 9]>		<html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>  <!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="keywords" content="${channel.keywords!}"/>
+<meta http-equiv="description" content="${channel.description!}"/>
+<title>${channel.title!channel.name} - ${site.name}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<link  href="/${res}/css/spoccss/iconfont-ie6ie7.css"  type="text/css"  rel="stylesheet"/>
+
+<style>
+    .nav { margin-left:77px;}
+    .nav_li,
+    .nav_split { float:left; display:block;}
+    .nav_split { margin:0 30px; padding-top:22px;; font-size:16px; color:#ddd;}
+    .nav_link { display:block; line-height:68px; font-size:16px; color:#666;}
+    .nav_link i { margin-right:6px; vertical-align:0; *vertical-align:-1px;}
+    .nav_link:hover,
+    .nav_cur { border-bottom:2px #157ed9 solid; color:#157ed9;}
+    .nav_link:hover .icon-home-stroke:before,
+    .nav_cur .icon-home-stroke:before { content: "\e739";}
+    .nav_link:hover .icon-course-stroke:before,
+    .nav_cur .icon-course-stroke:before { content: "\e738";}
+    .nav_link:hover .icon-wechat-stroke:before,
+    .nav_cur .icon-wechat-stroke:before { content: "\e637";}
+    a{text-decoration: none; }
+</style>
+<head>
+<body>
+
+        [@cms_content_page channelId=channel.id count='2' sysPage='3' titLen='25' append='...' orderBy='4' dateFormat='yyyy-MM-dd' channelOption='0']
+            [#list tag_pagination.list as a]
+                <li class="nav_split">|</li>
+                    <li class="nav_li"><a href="${a.description!a.url}" target="_blank"; class="nav_link">
+                        <i class="presspc icon-setting-stroke"></i><span>
+                        ${a.title!''}</span></a>
+                    </li>
+            [/#list]
+        [/@cms_content_page]
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${channel.title!channel.name} - ${site.name}</title>
+    <link rel="stylesheet" href="/${res}/css/reset.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/${res}/css/media.css">
+    <link rel="stylesheet" href="/${res}/lib/css/colorbox.css">
+    <link rel="stylesheet" href="/${res}/css/common.css">
+    <link rel="stylesheet" href="/${res}/css/common2.css">
+    <link rel="stylesheet" href="/${res}/css/about.css">
+    <link rel="stylesheet" href="/${res}/css/lab.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 头部 -->
+    [#include "../include/header.html"/]
+    <!-- 内容区 -->
+    <div class="main">
+        <div class="main-banner">
+            <img class="main-banner--img" src="/${res}/img/acad/aca_banner.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <ul class="page-bread">
+                <li><a href="/cms/">HOME</a></li>
+                <li><a href="/cms/academics/index.jhtml">ACADEMICS</a></li>
+                <li>TEACHING LAB</li>
+            </ul>
+            <div class="main-wrap">
+                <div class="row">
+                    <div class="section-wrap col-xs-9 col-sm-9 col-md-9 ie7-width">
+                        <div class="content-news">
+                            <div class="content-news--title">
+                                <div class="news-title--wrap">
+                                    <h3>TEACHING LAB</h3>
+                                </div>
+                                <div class="news-title--underline">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="about-content">
+                                <div class="ts-content--artical">
+
+                                    [@cms_channel id='291']
+                                    <p>${tag_bean.txt!}</p>
+                                    [/@cms_channel]
+                                    <div class="row">
+                                        <div class="thumb-list clearfix">
+                                            [@cms_content_list orderBy='5' channelId='291' channelOption='0' dateFormat='yyyy-MM-dd']
+                                            [#list tag_list as c]
+                                            <div class="thumb-list--item col-xs-4 col-sm-4">
+                                                <a class="c-pop" href="${c.url!}">
+                                                    <img src="${c.typeImg!}">
+                                                    <div class="trans-thumb-mask">
+                                                        <i class="icon icon-thumb--plus"></i>
+                                                    </div>
+                                                </a>
+                                                <div class="map-title">
+                                                    <div class="map-title--point"></div>
+                                                    <div class="map-title--text">${c.title!}</div>
+                                                </div>
+                                            </div>
+                                            [/#list]
+                                            [/@cms_content_list]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar -->
+                    [#include "../include/academics_catalog.html"/]
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    [#include "../include/footer.html"/]
+    <script src="/${res}/lib/js/jquery.1.10.2.js"></script>
+    <script src="/${res}/lib/js/bootstrap.min.js"></script>
+    <script src="/${res}/lib/js/jquery.colorbox-min.js"></script>
+    <script src="/${res}/js/sidebaricon.js"></script>
+    <script src="/${res}/lib/js/idangerous.swiper.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // colorbox
+        $(".c-pop").colorbox({
+            iframe: true,
+            innerHeight: "800px",
+            width: "52%",
+            opacity: 0.8,
+            overlayClose: true,
+
+        });
+    })
+    </script>
+</body>
+
+</html>

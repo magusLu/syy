@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>	<html class="ie6 lt-ie9 lt-ie8 lt-ie7" lang="zh-CN"> <![endif]-->
+<!--[if IE 7]>		<html class="ie7 lt-ie9 lt-ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 8]>		<html class="ie8 lt-ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 9]>		<html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html>  <!--<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="keywords" content="${channel.keywords!}"/>
+<meta http-equiv="description" content="${channel.description!}"/>
+<title>${channel.title!channel.name} - ${site.name}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<link rel="Shortcut Icon" href="images/logo.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/${res}/css/inc/style.css" type="text/css" />
+<link rel="stylesheet" href="/${res}/css/inc/style_media.css" type="text/css" />
+<link rel="stylesheet" href="/${res}/css/inc/swiper.min.css" type="text/css" />
+<link rel="stylesheet" href="/${res}/css/inc/iconfont/iconfont.css" type="text/css" />
+<script src="/${res}/css/inc/jquery.min.js"></script>
+<!--[if IE]>
+<![endif]-->
+<!--[if lt IE 9]> -->
+<!--<script type="text/javascript" src="/${res}/css/inc/html5.js"></script>-->
+<!--<script type="text/javascript" src="/${res}/css/inc/respond.min.js"></script>-->
+<script src="/${res}/css/inc/swiper.min.js"></script>
+<script src="/${res}/css/inc/common.js"></script>
+<head>
+<body>
+<div class="wrapper">
+    [#include "../include/header.html"/]
+    <script>
+        $(".nav").find("a").removeClass("cur");
+        var curIndex=2;
+        [#if channel.parent.path="bgxz"]
+        curIndex=4;
+        [#elseif channel.parent.path="xxfw"]
+        curIndex=6;
+        [/#if]
+        $(".nav").find("li:eq("+curIndex+")").find("a:eq(0)").addClass("cur");
+    </script>
+    <div class="container">
+        <div class="content mainwidth">
+            <div class="rightside">
+                <div class="title_r">${channel.parent.name}</div>
+                <div class="item_side2">
+                    <ul class="side_list side_list_on">
+                        [@cms_channel_list parentId=channel.parent.id] 
+                        [#list tag_list as c] 
+                        <li [#if c.id=channel.id]class="cur"[/#if] ><a href="javascript:;" onclick="toList('${c.path}','${c_index}','${c.name}');">${c.name}</a></li>
+                        [/#list] 
+                        [/@cms_channel_list]
+                    </ul>
+                </div>
+            </div>
+            <div class="include">
+                <div class="mainside">
+                    <div class="content_main">
+                        <div class="title_cont">
+                            <span id="text"><img src="/${res}/images/image/title_icon2.png" />${channel.name}</span>
+                            <div class="sitecon">
+                                <a href="/cms">首页</a> &gt;
+                                <a href="/cms/xswyh/index.jspx">${channel.parent.name}</a> &gt;
+                                <a href="#" onclick="window.location.href=window.location;"  class="cur" id="now">${channel.name}</a>
+                            </div>
+                        </div>
+                        <div class="content_pbody">
+                            <div class="edittext">
+                                <div class="tit_cont">清华大学深圳研究生院学术委员会主要职责有：</div>
+                                <ul class="council_list">
+                                    <li>研讨全校教学工作规划（含学科建设、专业建设、课程建设、教材建设、教学计划）和重大教学改革措施，向学校提供实施方案，不断完善人才培养规范标准；</li>
+                                    <li>研讨全校教学质与量的标准和审议办法，提出设置教学岗位的原则，并向专业职务评审委员会推荐教学岗位的高级职务教师名单；</li>
+                                    <li>审定全校各类课程建设规范；检查、验收、评审教学成果；评估现行课程教学质量；</li>
+                                    <li>制定各类教学奖励的评选标准和办法，推荐省级以上各种教学奖励；审定各类教学补贴和酬金发放原则和办法；</li>
+                                    <li>组织审定自编教材，并择优向出版社推荐出版；</li>
+                                    <li>指导有关教师开展教学研究，并择优向上级有关部门推荐教学改革立项项目。</li>
+                                </ul>
+                                <div class="tit_cont">清华大学深圳研究生院学术委员会委员名单：</div>
+                                <table class="table table_2" style="width: 100%;">
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>姓名</th>
+                                        <th>所在学院</th>
+                                        <th>教育部高等学校教指委名称</th>
+                                        <th>在委员会中的职务</th>
+                                    </tr>
+                                    [@cms_content_page channelId=channel.id count='100' typeId='1' titLen='25' append='...' orderBy='4' dateFormat='yyyy-MM-dd' channelOption='0']
+                                    [#list tag_pagination.list as a]
+                                    <tr>
+                                        <td>${a_index+1}</td>
+                                        <td>[@text_cut s=a.title len=titLen append=append/]</td>
+                                        <td>[@text_cut s=a.shortTitle len=titLen append=append/]</td>
+                                        <td>[@text_cut s=a.description len=titLen append=append/]</td>
+                                        <td>[@text_cut s=a.author len=titLen append=append/]</td>
+                                    </tr>
+                                    [/#list]
+                                    [/@cms_content_page]
+                                </table>
+                            </div>
+                        </div>
+                        <!--<div class="pagination">-->
+                        <!--<a href="#" class="prev">上一页</a>-->
+                        <!--<a href="#" class="cur">1</a>-->
+                        <!--<a href="#">2</a>-->
+                        <!--<a href="#">3</a>-->
+                        <!--<a href="#">4</a>-->
+                        <!--<a href="#">5</a>-->
+                        <!--<a href="#" class="next">下一页</a>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            function GetQueryString(name){
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if(r!=null)return  decodeURI(r[2]); return "";
+            }
+        })
+        function toList(list,e,text){
+            window.location.href="/cms/"+list+"/index.jspx";
+        }
+    </script>
+    <a href="javascript:void(0);" class="top"></a>
+</div>
+[#include "../include/footer.html"/]
+</body>
+</html>

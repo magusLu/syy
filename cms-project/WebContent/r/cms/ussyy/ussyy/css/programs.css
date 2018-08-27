@@ -1,0 +1,47 @@
+.deadline-list--items{
+	margin-left: 70px;
+	margin-bottom: 10px;
+	padding: 15px 0;
+	background-color:#fff; 
+	box-shadow:0 5px 9px 2px #e8ebf2;
+}
+.deadline-list--date,.deadline-list--example{
+	display: inline-block;
+	padding: 16px 0;
+	vertical-align: top;
+}
+.deadline-list--example{
+	margin-left: 19px;
+}
+.deadline-list--date{
+	width: 142px;
+	margin-left: -70px;
+	text-align: center;
+	background-color:#4e369e;
+	color: #fff;
+}
+.getmore{
+    width: 100%;
+    margin-top: 28px;
+    text-align: center;
+}
+.apply{
+	padding: 35px 44px;
+	margin: 0 -15px -50px -15px;
+	text-align: right;
+	background: url('../img/admission/ad_under.jpg') no-repeat;
+	background-size:cover; 
+	color: #fff;
+}
+.apply-title{
+	text-align: right;
+}
+.apply-title>i{
+	font-size: 28px;
+	font-weight: 600;
+}
+.apply .switch-button{
+	background-color: #4e369e;
+	color: #fff;
+	border-color: #fff;
+}

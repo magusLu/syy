@@ -1,0 +1,11 @@
+@media(min-width: 1600px) {
+    .ts-navbar {
+        margin-left: 118px;
+    }
+}
+
+@media(max-width: 1599px) {
+    .ts-navbar {
+        margin-left: 0;
+    }
+}

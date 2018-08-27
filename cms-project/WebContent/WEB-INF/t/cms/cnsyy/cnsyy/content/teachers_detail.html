@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--<meta name="viewport" content="width=device-width">-->
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<link rel="Shortcut Icon" href="/favicon.ico?v1" type="image/x-icon" />
+<meta name="Keywords" content="${channel.keywords!}" />
+<meta name="Description" content="${channel.description!}" />
+<meta name="Author" content="Shenzhen Doocom Technology Co., Ltd. http://www.doocom.cn, Apr 2018" />
+<meta name="robots" content="index,follow,noodp,noydir" />
+
+<title>${channel.title!channel.name} - ${site.name}</title>
+
+<link rel="stylesheet" href="/${res}/cn/css/style.css" />
+
+<!--<link rel="stylesheet" href="/${res}/cn/css/style_mobile.css" />-->
+
+<link rel="stylesheet" media="print" href="/${res}/cn/css/print.css" />
+<!--[if IE]>
+	<link rel="stylesheet" href="/${res}/cn/css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="/${res}/cn/js/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<script src="/${res}/cn/js/DD_belatedPNG.js"></script>
+<script type="text/javascript"> 
+	DD_belatedPNG.fix();
+</script> 
+<![endif]-->
+
+<script src="/${res}/cn/js/jquery.js"></script>
+<script src="/${res}/cn/js/jquery.imagesloaded.min.js"></script>
+
+<link rel="stylesheet" href="/${res}/cn/css/idangerous.swiper.css" />
+<script src="/${res}/cn/js/idangerous.swiper.min.js"></script>
+
+<script src="/${res}/cn/js/swfobject.js"></script>
+<script src="/${res}/cn/js/func.js"></script>
+
+</head>
+<body>
+<section class="wrapper">
+	[#include "../include/header.html"/]
+		
+	<section class="container">
+		<div class="conban" style="background-image: url(/${res}/cn/images/conban_3.png);">
+			<!--<img src="/${res}/cn/images/conban_1.jpg" alt="" class="m_img" />-->
+			<div class="mainwidth">
+				<div class="sitepage">
+					<a href="/cms/">首页</a>
+					<a href="/cms/szdw/index.jhtml">学院概况</a>
+					<a href="${channel.parent.url!}">${channel.parent.name!}</a>
+					<span>${content.title!}</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="conbox">
+			<div class="mainwidth">
+				<div class="aboutcon">
+					<div class="conleft_con">
+						
+						<div class="aboutdetail">
+						
+							<div class="edittext">
+								<div class="teacherinfo">
+									<img src="${content.typeImg!}" alt="" width="200" height="280" class="img" />
+									<div class="textcon">
+										<h3 class="title">${content.title!}<span class="post">[#if content.attr.tagStrNew?? && content.attr.tagStrNew!=""][#list content.attr.tagStrNew?split(",") as tag]${tag+" "}[/#list][/#if]</span></h3>
+										<div class="text">
+											电话：${content.attr.phone!}　　邮箱：<a href="#">${content.attr.email!}</a>
+											<span class="addr">办公地址：${content.attr.workAddress!}</span>
+										</div>
+										<p>${content.description!}</p>
+										
+									</div>
+								</div>
+								${txt!}
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="sidebar">
+						<h3 class="title"><span class="border"></span>师资队伍</h3>
+						<ul class="sidebarlist">
+							[@cms_channel_list parentId='232' ]
+							[#list tag_list as tag]
+							<li><a href="${tag.url!}"><span>${tag.name!}</span></a></li>
+							[/#list]
+							[/@cms_channel_list]
+
+							[@cms_channel id='231']
+							<li><a href="${tag_bean.url!}"><span>${tag_bean.name!}</span></a></li>
+							[/@cms_channel]
+
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	[#include "../include/footer.html"/]
+	
+	<div class="pageOverlay"></div>
+	
+	<div class="gotop"></div>
+	
+</section>
+
+<script type="text/javascript">
+$(function(){
+	
+})
+</script>
+</body>
+</html>

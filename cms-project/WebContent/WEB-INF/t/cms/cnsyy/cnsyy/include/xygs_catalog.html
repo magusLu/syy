@@ -1,0 +1,23 @@
+<div class="sidebar">
+    <h3 class="title"><span class="border"></span>学院概况</h3>
+    <ul class="sidebarlist">
+        <li [#if channel.path=='gs']class="active cur"[/#if] ><a href="/cms/gs/index.jspx"><span>概述</span></a></li>
+        <li [#if channel.path=='lsyg']class="active cur"[/#if]><a href="/cms/lsyg/index.jspx"><span>历史沿革</span></a></li>
+        <li [#if channel.path=='lrld']class="active cur"[/#if]><a href="/cms/lrld/index.jspx"><span>历任领导</span></a></li>
+        <li [#if channel.path=='xrld']class="active cur"[/#if]><a href="/cms/xrld/index.jspx"><span>现任领导</span></a></li>
+        <li [#if channel.path=='zjjg']class="active cur"[/#if]><a href="/cms/zzjg/index.jspx"><span>组织架构</span></a></li>
+        <li [#if channel.path=='xyxx' || channel.parent.path=='xyxx']class="active cur"[/#if]>
+            <a href="/cms/xyxx/index.jspx"><span>校园信息</span></a>
+            <div class="sidesecnav">
+                <ul>
+                    [@cms_channel_list parentId='145']
+                    [#list tag_list as tag]
+                    <li [#if channel.id  == tag.id]class="active"[/#if]><a href="[#if tag.path=="jxcs" || tag.path=="jtxx"]${tag.url!"javascript:;"}[#else]javascript:;[/#if]"><span>${tag.name}</span></a></li>
+                    [/#list]
+                    [/@cms_channel_list]
+                </ul>
+            </div>
+        </li>
+        <li [#if channel.path=='spyhc']class="active cur"[/#if]><a href="/cms/spyhc/index.jspx"><span>视频与画册</span></a></li>
+    </ul>
+</div>

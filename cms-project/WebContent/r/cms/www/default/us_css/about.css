@@ -1,0 +1,86 @@
+.about-thumb {
+    width: 28%;
+    margin-right: 26px;
+    margin-bottom: 26px;
+}
+
+.about-thumb img {
+    max-width: 100%;
+}
+
+/*.about-catalog .catalog-items a:link .panel-icon{
+    background-position: -13px top;
+}*/
+
+.about-content--sign{
+    padding-bottom: 54px;
+    text-align: right;
+}
+.sign-en{
+    max-width: 13.5%;
+    margin-bottom: 16px;
+}
+/*时间线*/
+.mt25{
+	margin-top: 25px !important;
+}
+.time-line--wrap{
+	padding: 0 47px;
+}
+.time-line{
+	position: absolute;
+	height: 100%;
+}
+.time-line--info{
+	padding-bottom: 39px;
+	margin-left: 167px;
+}
+.time-line--items{
+	position: relative;
+	overflow:hidden;
+}
+.info--date{
+	padding-left: 26px;
+	font-size: 1.57rem;
+	font-weight: 600;
+	color: #a0a0a0;
+}
+.time-line--content{
+	padding: 24px 26px;
+	background-color: #f8f7fb;
+	line-height: 24px;
+}
+.time-line--content p{
+	margin: 0;
+}
+.time-line--element{
+	overflow:hidden;
+}
+.time-line--disc{
+	height: 24px;
+	width: 24px;
+	margin: 5px 0;
+	background: url('../img/time_disc_03.png') no-repeat;
+}
+.time-line--date{
+	margin-right: 11px;
+	padding: 5px 25px 5px 18px;
+	line-height: 24px;
+	background: url('../img/timeline_bg.png') no-repeat;
+	background-position: -17px top;
+	color: #fff;
+}
+.top-line,.bottom-line{
+	width: 4px;
+	background: #dcd7ec;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.top-line{
+	height: 33px;
+	margin-bottom: -7px;
+}
+.bottom-line{
+	margin-top: -7px;
+	padding-bottom: 9999px;
+}

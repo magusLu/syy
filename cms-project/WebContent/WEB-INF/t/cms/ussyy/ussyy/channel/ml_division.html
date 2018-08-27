@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${channel.title!channel.name} - ${site.name}</title>
+    <link rel="stylesheet" href="/${res}/css/reset.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/${res}/css/media.css">
+    <link rel="stylesheet" href="/${res}/lib/css/colorbox.css">
+    <link rel="stylesheet" href="/${res}/css/common.css">
+    <link rel="stylesheet" href="/${res}/css/common2.css">
+    <link rel="stylesheet" href="/${res}/css/about.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 头部 -->
+    [#include "../include/header.html"/]
+    <!-- 内容区 -->
+    <div class="main">
+        <div class="main-banner">
+            <img class="main-banner--img" src="/${res}/img/acad/aca_banner.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <ul class="page-bread">
+                <li><a href="/cms/">HOME</a></li>
+                <li><a href="/cms/academics/index.jhtml">ACADEMICS</a></li>
+                <li>DIVISIONS</li>
+            </ul>
+            <div class="main-wrap">
+                <div class="row">
+                    <div class="section-wrap col-xs-9 col-sm-9 col-md-9 ie7-width">
+                        <div class="content-news">
+                            <div class="content-news--title">
+                                <div class="news-title--wrap">
+                                    <h3>DIVISION</h3>
+                                </div>
+                                <div class="news-title--underline">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="about-content">
+                                <div class="ts-content--artical">
+                                    [@cms_channel id='286']
+                                    <p>${tag_bean.txt!}</p>
+                                    [/@cms_channel]
+
+                                    <ul class="figure-thumb">
+                                        [@cms_content_list orderBy='5' channelId='292' channelOption='0' dateFormat='yyyy-MM-dd']
+                                        [#list tag_list as c]
+                                        <li class="figure-thumb--items">
+                                            <a href="javascript:;">
+                                                <img src="${c.typeImg!}" alt="">
+                                                <div class="thumb-mask"></div>
+                                                <div class="thumb-mask--title">
+                                                    <div class="title-wrap">
+                                                        <span>${c.title!}</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        [#if (c_index+1)%4==0]
+                                            </ul>
+                                            <ul class="figure-thumb text-center">
+                                        [/#if]
+                                        [/#list]
+                                        [/@cms_content_list]
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content--events pullmargin">
+                            <div class="section-two content-events--wrap">
+                                <div class="content-news--title">
+                                    <div class="news-title--wrap">
+                                        <h3>AFFILIATED INSTITUTES</h3>
+                                    </div>
+                                    <div class="news-title--underline">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <ul class="institutes-list">
+
+                                    [@cms_content_list orderBy='5' channelId='293' channelOption='0' dateFormat='yyyy-MM-dd']
+                                    [#list tag_list as c]
+                                    <li class="institutes-items">
+                                        <div class="institutes-items--thumb">
+                                            <a href="javascript:;">
+                                                <img src="${c.attr.img!}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="institutes-items--content">
+                                            <a class="news-pop" href="${c.url!}">
+                                                <div class="institutes-title--wrap">
+                                                    <img src="${c.typeImg!}">
+                                                    <div class="vline"></div>
+                                                    <div class="institutes-title">
+                                                        <span>${c.title!}</span>
+                                                        <p class="institutes-sub-title">${c.attr.subTitle2!}</p>
+                                                    </div>
+                                                    <!-- <p class="institutes-sub-title"></p> -->
+                                                </div>
+                                                <div class="institutes-intro">${c.txt!}</div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    [#if (c_index+1)!=tag_list?size]
+                                        <div class="dashed-border"></div>
+                                    [/#if]
+                                    [/#list]
+                                    [/@cms_content_list]
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-news">
+                            <div class="content-news--title">
+                                <div class="news-title--wrap">
+                                    <h3>JOINT TEACHING PROGRAMS</h3>
+                                </div>
+                                <div class="news-title--underline">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="about-content">
+                                <div class="ts-content--artical">
+                                    <div class="ts-card research-card">
+                                        <div class="card-title--wrap clearfix">
+                                            <div class="ts-card--title floatLeft">THE CHINESE UNIVERSITY OF HONG KONG</div>
+                                        </div>
+                                        <ul class="ts-card--list">
+                                            <li>Executive Master of Science in Logistics & Supply Chain Management</li>
+                                            <li>MBA Program in Finance</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ts-card research-card">
+                                        <div class="card-title--wrap clearfix">
+                                            <div class="ts-card--title floatLeft">HONG KONG UNIVERSITY OF SCIENCE & TECHNOLOGY</div>
+                                        </div>
+                                        <ul class="ts-card--list">
+                                            <li>Executive Master of Science in Logistics & Supply Chain Management</li>
+                                            <li>MBA Program in Finance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content--events">
+                            <div class="section-two content-events--wrap">
+                                <div class="content-news--title">
+                                    <div class="news-title--wrap">
+                                        <h3>NON-DEGREE TRANING</h3>
+                                    </div>
+                                    <div class="news-title--underline">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="ts-card research-card">
+                                    <div class="card-title--wrap clearfix">
+                                        <div class="ts-card--title floatLeft">THE CHINESE UNIVERSITY OF HONG KONG</div>
+                                    </div>
+                                    <ul class="ts-card--list">
+                                        <li>Executive Master of Science in Logistics & Supply Chain Management</li>
+                                        <li>MBA Program in Finance</li>
+                                    </ul>
+                                </div>
+                                <div class="ts-card research-card">
+                                    <div class="card-title--wrap clearfix">
+                                        <div class="ts-card--title floatLeft">HONG KONG UNIVERSITY OF SCIENCE & TECHNOLOGY</div>
+                                    </div>
+                                    <ul class="ts-card--list">
+                                        <li>Executive Master of Science in Logistics & Supply Chain Management</li>
+                                        <li>MBA Program in Finance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar -->
+                    [#include "../include/academics_catalog.html"/]
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    [#include "../include/footer.html"/]
+    <script src="/${res}/lib/js/jquery.1.10.2.js"></script>
+    <script src="/${res}/lib/js/bootstrap.min.js"></script>
+    <script src="/${res}/lib/js/jquery.colorbox-min.js"></script>
+    <script src="/${res}/js/sidebaricon.js"></script>
+    <script src="/${res}/lib/js/idangerous.swiper.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // colorbox
+        $(".news-pop").colorbox({
+            transition: "fade",
+            width: "52%",
+            innerHeight: "800px",
+            iframe:true,
+            opacity: 0.8,
+            overlayClose: true
+        });
+    })
+    </script>
+</body>
+
+</html>

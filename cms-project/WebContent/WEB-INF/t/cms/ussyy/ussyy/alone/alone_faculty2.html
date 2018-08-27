@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${channel.title!channel.name} - ${site.name}</title>
+    <link rel="stylesheet" href="/${res}/css/reset.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/${res}/lib/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/${res}/css/media.css">
+    <link rel="stylesheet" href="/${res}/lib/css/colorbox.css">
+    <link rel="stylesheet" href="/${res}/css/common.css">
+    <link rel="stylesheet" href="/${res}/css/common2.css">
+    <link rel="stylesheet" href="/${res}/css/ts-collapse.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 头部 -->
+    [#include "../include/header.html"/]
+    <!-- 内容区 -->
+    <div class="main">
+        <div class="main-banner">
+            <img class="main-banner--img" src="/${res}/img/acad/aca_banner.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <ul class="page-bread">
+                <li><a href="/cms/">HOME</a></li>
+                <li><a href="/cms/academics/index.jhtml">ACADEMICS</a></li>
+                <li>FACULTY DIRECTORY</li>
+            </ul>
+            <div class="main-wrap">
+                <div class="row">
+                    <div class="section-wrap col-xs-9 col-sm-9 col-md-9 ie7-width">
+                        <div class="content-news">
+                            <div class="content-news--title">
+                                <div class="news-title--wrap">
+                                    <h3>FACULTY DIRECTORY</h3>
+                                </div>
+                                <div class="browse-type">
+                                    <div class="browse-wrap">
+                                        <span>Browse By:</span>
+                                        <select class="select-value" name="browsetype" onchange="window.location=this.value">
+                                            <option value="/cms/facultydirectory/index.jhtml">Name</option>
+                                            <option value="/cms/facultydirectory2/index.jhtml" selected="selected">Name1</option>
+                                            <option value="name2">Name2</option>
+                                        </select>
+                                        <!-- <div class="select-option">
+                                            <div class="select-text">Name</div>
+                                            <i class="icon-trangle"></i>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="news-title--underline">
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="about-content">
+                                <div class="ts-content--artical">
+                                    <div class="collapse-list">
+                                        [@cms_channel_list parentId='290']
+                                        [#list tag_list as tag]
+
+                                        <div class="collapse-item">
+                                            <div class="collapse-title catalog-items">${tag.name!}<i class="icon panel-icon col-open"></i></div>
+                                            <div class="collapse-content cshow">
+                                                <div class="table-list-wrap">
+                                                    <table class="table-list-content">
+                                                        <tr>
+                                                            <th class="tb-center">NAME</th>
+                                                            <th class="tb-center">POSITION</th>
+                                                            <th class="tb-center">PHONE</th>
+                                                            <th class="tb-center">EMAIL ADDRESS</th>
+                                                        </tr>
+                                                        [@cms_content_list orderBy='5' channelId='${tag.id!}' channelOption='0' dateFormat='yyyy-MM-dd']
+                                                        [#list tag_list as c]
+                                                        <tr>
+                                                            <td class="tb-left">${c.title!}</td>
+                                                            <td class="tb-left">${c.attr.positional!}</td>
+                                                            <td class="tb-left">${c.attr.phone!}</td>
+                                                            <td class="tb-left">${c.attr.email!}</td>
+                                                        </tr>
+                                                        [/#list]
+                                                        [/@cms_content_list]
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        [/#list]
+                                        [/@cms_channel_list]
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sidebar -->
+                    <div class="content-events col-xs-3 col-sm-3 col-md-3">
+                        <div class="content-events--title">
+                            <span>ACADEMICS</span>
+                        </div>
+                        <div class="content-sidebar">
+                            <div class="sidebar-catalog about-catalog" id="sidebar-panel">
+                                <div class="panel-items panel">
+                                    <div class="catalog-items current-catalog">
+                                        <a href="#school" data-toggle="collapse" data-parent="#sidebar-panel">
+                                        <span>DIVISONS</span>
+                                        <i class="icon panel-icon col-open"></i>
+                                    </a>
+                                    </div>
+                                    <div id="school" class="panel-collapse collapse in">
+                                        <ul class="panel-secondary panel-body">
+                                            <li class="panel-secondary--items">
+                                                <a href="./division.html">DIVISONS</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="./health.html">LIFE SCIENCE & HEALTH</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/history">ENERGY & ENVIRONMENT</a>
+                                            </li>
+                                            <li class="panel-secondary--items ">
+                                                <a href="/${res}/about/about">INFORMATION SCIENCE</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/organizational">LOGISTICS & TRANSPORTATION</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/organizational">ADVANCED MANUFACTURING</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/organizational">MARINE SCIENCE & TECHNOLOGY</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/organizational">SOCIAL SCIENCE & MANAGEMENT</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-items panel">
+                                    <div class="catalog-items ">
+                                        <a href="#campus" data-toggle="collapse" data-parent="#sidebar-panel">
+                                        <span>JIONT TEACHING PROGRAMS</span>
+                                        <i class="icon panel-icon"></i>
+                                    </a>
+                                    </div>
+                                    <div id="campus" class="panel-collapse collapse">
+                                        <ul class="panel-secondary panel-body">
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/stlife">STUDENT LIFE</a>
+                                            </li>
+                                            <li class="panel-secondary--items current-item">
+                                                <a href="/${res}/about/facilites">CAMPUS FACILITES</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/town">SHENZHEN UNVERSITY TOWN</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-items panel">
+                                    <div class="catalog-items">
+                                        <a href="#visit" data-toggle="collapse" data-parent="#sidebar-panel">
+                                        <span>NON-DEGREE TRAINING</span>
+                                        <i class="icon panel-icon"></i>
+                                    </a>
+                                    </div>
+                                    <div id="visit" class="panel-collapse collapse">
+                                        <ul class="panel-secondary panel-body">
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/map">GETTING TO CAMPUS</a>
+                                            </li>
+                                            <li class="panel-secondary--items">
+                                                <a href="/${res}/about/contact">CONTACT US</a>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                </div> 
+                                <div class="panel-items panel current-catalog--bold">
+                                    <div class="catalog-items">
+                                        <a href="./directory.html">
+                                        <span>FACULTY DIRECTORY</span>
+                                    </a>
+                                    </div>
+                                </div>
+                                <div class="panel-items panel">
+                                    <div class="catalog-items ">
+                                        <a href="./lab.html">
+                                        <span>TEACHING LAB</span>
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    [#include "../include/footer.html"/]
+    <script src="/${res}/lib/js/jquery.1.10.2.js"></script>
+    <script src="/${res}/lib/js/bootstrap.min.js"></script>
+    <script src="/${res}/js/sidebaricon.js"></script>
+    <script src="/${res}/js/ts-collapse.js"></script>
+</body>
+
+</html>

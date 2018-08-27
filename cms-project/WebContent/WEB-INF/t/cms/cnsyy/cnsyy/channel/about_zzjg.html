@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--<meta name="viewport" content="width=device-width">-->
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<link rel="Shortcut Icon" href="/favicon.ico?v1" type="image/x-icon" />
+<meta name="Keywords" content="${channel.keywords!}" />
+<meta name="Description" content="${channel.description!}" />
+<meta name="Author" content="Shenzhen Doocom Technology Co., Ltd. http://www.doocom.cn, Apr 2018" />
+<meta name="robots" content="index,follow,noodp,noydir" />
+
+<title>清华大学深圳研究生院</title>
+
+<link rel="stylesheet" href="/${res}/cn/css/style.css" />
+
+<!--<link rel="stylesheet" href="/${res}/cn/css/style_mobile.css" />-->
+
+<link rel="stylesheet" media="print" href="/${res}/cn/css/print.css" />
+<!--[if IE]>
+	<link rel="stylesheet" href="/${res}/cn/css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="/${res}/cn/js/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<script src="/${res}/cn/js/DD_belatedPNG.js"></script>
+<script type="text/javascript"> 
+	DD_belatedPNG.fix();
+</script> 
+<![endif]-->
+
+<script src="/${res}/cn/js/jquery.js"></script>
+<script src="/${res}/cn/js/jquery.imagesloaded.min.js"></script>
+
+<link rel="stylesheet" href="/${res}/cn/css/idangerous.swiper.css" />
+<script src="/${res}/cn/js/idangerous.swiper.min.js"></script>
+
+<script src="/${res}/cn/js/swfobject.js"></script>
+<script src="/${res}/cn/js/func.js"></script>
+
+</head>
+<body>
+<section class="wrapper">
+	[#include "../include/header.html"/]
+		
+	<section class="container">
+		<div class="conban" style="background-image: url(/${res}/cn/images/conban_2.png);">
+			<!--<img src="/${res}/cn/images/conban_1.jpg" alt="" class="m_img" />-->
+			<div class="mainwidth">
+				<div class="sitepage">
+					<a href="/cms/">首页</a>
+					<a href="/cms/gs/index.jhtml">学院概况</a>
+					<span>组织架构</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="conbox">
+			<div class="mainwidth">
+				<div class="aboutcon">
+					<div class="conleft_con">
+						<h3 class="titlecon">
+							<span>组织架构</span>
+						</h3>
+						
+						<div class="organization">
+							<img src="/${res}/cn/images/zzjg_head.png" alt="" class="img" />
+							<div class="organizationinfo">
+								<div class="item">
+									<h3 class="title">院部中心</h3>
+									<ul class="organizationlist">
+										[@cms_channel_list parentId='224' ]
+										[#list tag_list as tag]
+										<li><a href="${tag.url!}">${tag.name}</a></li>
+										[/#list]
+										[/@cms_channel_list]
+									</ul>
+								</div>
+								<div class="item">
+									<h3 class="title">管理与服务部门</h3>
+									<ul class="organizationlist">
+										[@cms_channel_list parentId='225' ]
+										[#list tag_list as tag]
+										<li><a href="${tag.url!}">${tag.name}</a></li>
+										[/#list]
+										[/@cms_channel_list]
+									</ul>
+								</div>
+								
+							</div>
+						</div>
+						
+						
+					</div>
+
+					[#include "../include/xygs_catalog.html"/]
+					
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+
+	
+	<div class="pageOverlay"></div>
+	
+	<div class="gotop"></div>
+	
+</section>
+
+<script type="text/javascript">
+$(function(){
+	
+})
+</script>
+</body>
+</html>

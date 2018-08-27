@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--<meta name="viewport" content="width=device-width">-->
+<meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<link rel="Shortcut Icon" href="/favicon.ico?v1" type="image/x-icon" />
+<meta name="Keywords" content="${channel.keywords!}" />
+<meta name="Description" content="${channel.description!}" />
+<meta name="Author" content="Shenzhen Doocom Technology Co., Ltd. http://www.doocom.cn, Apr 2018" />
+<meta name="robots" content="index,follow,noodp,noydir" />
+
+<title>清华大学深圳研究生院</title>
+
+<link rel="stylesheet" href="/${res}/cn/css/style.css" />
+
+<!--<link rel="stylesheet" href="/${res}/cn/css/style_mobile.css" />-->
+
+<link rel="stylesheet" media="print" href="/${res}/cn/css/print.css" />
+<!--[if IE]>
+	<link rel="stylesheet" href="/${res}/cn/css/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="/${res}/cn/js/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 7]>
+<script src="/${res}/cn/js/DD_belatedPNG.js"></script>
+<script type="text/javascript"> 
+	DD_belatedPNG.fix();
+</script> 
+<![endif]-->
+
+<script src="/${res}/cn/js/jquery.js"></script>
+<script src="/${res}/cn/js/jquery.imagesloaded.min.js"></script>
+
+<link rel="stylesheet" href="/${res}/cn/css/idangerous.swiper.css" />
+<script src="/${res}/cn/js/idangerous.swiper.min.js"></script>
+
+<script src="/${res}/cn/js/swfobject.js"></script>
+<script src="/${res}/cn/js/func.js"></script>
+
+</head>
+<body>
+<section class="wrapper">
+	[#include "../include/header.html"/]
+		
+	<section class="container">
+		<div class="conban" style="background-image: url(/${res}/cn/images/conban_2.png);">
+			<!--<img src="/${res}/cn/images/conban_1.jpg" alt="" class="m_img" />-->
+			<div class="mainwidth">
+				<div class="sitepage">
+					<a href="/cms/">首页</a>
+					<a href="/cms/gs/index.jhtml">学院概况</a>
+					<span>视频与画册</span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="conbox">
+			<div class="mainwidth">
+				<div class="aboutcon">
+					<div class="conleft_con">
+						<h3 class="titlecon">
+							<span>视频</span>
+						</h3>
+						
+						<div class="aboutdetail">
+							<div class="topvideocon">
+								[@cms_content_list count='1' orderBy='4' channelId='152' channelOption='0' dateFormat='yyyy-MM-dd']
+								[#list tag_list as a]
+								<a href="${a.url!"javascript:;"}">
+									<div class="img">
+										<span class="icon"></span>
+										<img src="${a.typeImg!}" alt="" style="max-width: 430px;max-height: 300px;" />
+									</div>
+									<div class="textcon">
+										<div class="t1">视 频</div>
+										<span class="date">${a.releaseDate?string("yyyy-MM-dd")}</span>
+										<span class="title">[@text_cut s=a.title len=41 append='...'/]</span>
+										<span class="text">[@text_cut s=a.description len=74 append='...'/]</span>
+										<span class="more">浏览更多 ></span>
+									</div>
+								</a>
+								[/#list]
+								[/@cms_content_list]
+
+							</div>
+							<ul class="topvideolist">
+								[@cms_content_list count='4' orderBy='5' channelId='152' channelOption='0' dateFormat='yyyy-MM-dd']
+								[#list tag_list as a]
+								[#if a_index != 0]
+								<li>
+									<a href="${a.url!"javascript:;"}">
+									<span class="img">
+											<span class="icon"></span>
+											<img src="${a.typeImg!}" alt="" width="260" height="110"  />
+										</span>
+									<span class="textcon">
+											<span class="title">[@text_cut s=a.title len=9 append='...'/]</span>
+											<span class="date">${a.releaseDate?string("yyyy-MM-dd")}</span>
+										</span>
+									</a>
+								</li>
+								[/#if]
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+							
+							
+							<h3 class="titlecon">
+								<span>画册与折页</span>
+							</h3>
+							
+							<ul class="albumlist">
+
+								[@cms_content_list count='4' orderBy='5' channelId='153' channelOption='0' dateFormat='yyyy-MM-dd']
+								[#list tag_list as a]
+								<li>
+									<a href="#">
+										<span class="img"><img src="${a.typeImg!}" onerror="this.src='/${res}/cn/images/pic_19.jpg';this.onerror=null" alt="" width="170" height="220" /></span>
+										<span class="title">${a.title}</span>
+										<span class="date">${a.releaseDate?string("yyyy-MM-dd")}</span>
+									</a>
+								</li>
+								[/#list]
+								[/@cms_content_list]
+							</ul>
+						</div>
+					</div>
+					[#include "../include/xygs_catalog.html"/]
+					
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	[#include "../include/footer.html"/]
+	
+	<div class="pageOverlay"></div>
+	
+	<div class="gotop"></div>
+	
+</section>
+
+<script type="text/javascript">
+$(function(){
+	
+})
+</script>
+</body>
+</html>

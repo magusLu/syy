@@ -1,0 +1,34 @@
+body{
+	background: #fff;
+}
+.pop-wrap{
+	padding:50px 34px 32px 34px;
+}
+.pop-title{
+	font-size: 1.285rem;
+	line-height: 1.714rem;
+	font-weight: bold;
+	color: #342d4a;
+}
+.pop-title--underline{
+	height: 2px;
+	width: 100%;
+	margin-top: 25px;
+	border-bottom: 1px solid #c2c0c8;
+}
+.pop-title--underline > div{
+	width: 100px;
+	height: 2px;
+	background-color: #4e369e;
+}
+.pop-articals{
+	margin-top: 31px;
+}
+.pop-articals p {
+	line-height: 30px;
+	margin-top: 31px;
+	margin-bottom: 18px;
+}
+.pop-articals img{
+	max-width: 100%;
+}

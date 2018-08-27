@@ -1,0 +1,171 @@
+
+@font-face {font-family: "presspc";
+  src: url('iconfont.eot?t=1478585864123'); /* IE9*/
+  src: url('iconfont.eot?t=1478585864123#iefix') format('embedded-opentype'), /* IE6-IE8 */
+url('iconfont.woff?t=1478585864123') format('woff'), /* chrome, firefox */
+url('iconfont.ttf?t=1478585864123') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+url('iconfont.svg?t=1478585864123#presspc') format('svg'); /* iOS 4.1- */
+}
+
+.presspc {
+  font-family:"presspc" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-teacher-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe600;');}
+
+.icon-teach-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60a;'); }
+
+.icon-wechat-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe637;'); }
+
+.icon-triangle-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe65e;'); }
+
+.icon-cross { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60f;'); }
+
+.icon-publish-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe606;'); }
+
+.icon-wechat-round-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe621;'); }
+
+.icon-exclamation { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe623;'); }
+
+.icon-cross2 { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe624;'); }
+
+.icon-file-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6cc;'); }
+
+.icon-tick3 { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe625;'); }
+
+.icon-books-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe603;'); }
+
+.icon-pen-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe611;'); }
+
+.icon-qq-round-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe622;'); }
+
+.icon-class-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe617;'); }
+
+.icon-delete-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe612;'); }
+
+.icon-noticeBell-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe618;'); }
+
+.icon-download-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe890;'); }
+
+.icon-QR-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe616;'); }
+
+.icon-courseMenu { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61c;'); }
+
+.icon-bulb-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe609;'); }
+
+.icon-exit-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe608;'); }
+
+.icon-more-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60e;'); }
+
+.icon-addStudent-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe607;'); }
+
+.icon-zoom-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe615;'); }
+
+.icon-share-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe610;'); }
+
+.icon-ppt-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe695;'); }
+
+.icon-bookClosed-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe605;'); }
+
+.icon-pepole-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6d2;'); }
+
+.icon-add-fillet-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe613;'); }
+
+.icon-manage-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60b;'); }
+
+.icon-email-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61d;'); }
+
+.icon-bookOpen-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe620;'); }
+
+.icon-refresh { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61a;'); }
+
+.icon-wechat-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe696;'); }
+
+.icon-link-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe64a;'); }
+
+.icon-bookClosed-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62e;'); }
+
+.icon-arrLeft { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61f;'); }
+
+.icon-arrLeft-roundFill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61e;'); }
+
+.icon-penV-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60c;'); }
+
+.icon-play-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe699;'); }
+
+.icon-dot-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe601;'); }
+
+.icon-video-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe69b;'); }
+
+.icon-course-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe61b;'); }
+
+.icon-setting-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe602;'); }
+
+.icon-selected-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62b;'); }
+
+.icon-operation { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe71e;'); }
+
+.icon-zoomIn { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe619;'); }
+
+.icon-refuse { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62c;'); }
+
+.icon-resource-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe604;'); }
+
+.icon-tick4 { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe632;'); }
+
+.icon-batchAdd { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe614;'); }
+
+.icon-home-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60d;'); }
+
+.icon-zoomOut { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe735;'); }
+
+.icon-arrRight-roundFill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe891;'); }
+
+.icon-arrRight { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe892;'); }
+
+.icon-book-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe738;'); }
+
+.icon-home-fill { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe739;');}
+
+.icon-arrUp { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe893;'); }
+
+.icon-arrDown { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe894;');}
+
+.icon-batchRefuse { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe626;'); }
+
+.icon-batchAgree { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe627;');}
+
+
+.icon-shoppingCart-stroke { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe628;');}
+
+
+.icon-ziyuan { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe63a;');}
+
+.icon-dingdanzhongxin { *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62d;');}
+
+.icon-resources_ico{ *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6a6;');}
+
+.icon-view_mode{ *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6a5;');}
+.icon-list_mode{ *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6a4;');}
+
+.icon-shopping{ *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6a7;');}
+
+
+.icon-phone_book{ *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6aa;');}
+
+.icon-contact_information{ *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6a9;');}
+.icon-collection{ *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe6a8;');}
+
+
+.icon-investmentinstitutions{*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe965;');}
+.icon-chakanxiangqing{*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe671;');}
+.icon-daochu{*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe62f;');}
+
+.icon-quxiao{*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe648;');}
+.icon-queding{*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe649;');}
+
+.icon-xuanze{*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe731;');}
